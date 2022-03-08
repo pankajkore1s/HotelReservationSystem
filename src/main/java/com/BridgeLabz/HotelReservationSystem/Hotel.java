@@ -3,7 +3,7 @@ package com.BridgeLabz.HotelReservationSystem;
 public class Hotel {
     String hotelName;
     int regularRate;
-    
+
     public String getHotelName(){
         return hotelName;
     }
