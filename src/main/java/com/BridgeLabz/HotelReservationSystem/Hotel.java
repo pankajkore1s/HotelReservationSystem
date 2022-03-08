@@ -3,7 +3,13 @@ package com.BridgeLabz.HotelReservationSystem;
 public class Hotel {
     String hotelName;
     int regularRate;
+    int weekDays,weekendDays;
 
+    public Hotel(String hotelName,int weekDays,int weekendDays){
+        this.hotelName=hotelName;
+        this.weekDays=weekDays;
+        this.weekendDays=weekendDays;
+    }
     public String getHotelName(){
         return hotelName;
     }

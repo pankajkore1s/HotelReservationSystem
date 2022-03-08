@@ -18,13 +18,13 @@ public class HotelReservationSystemTest {
     @Test
     public void checkCheapestRateHotel(){
         HotelReservation hotelReservation=new HotelReservation();
-        Hotel hotel1=new Hotel("LakeWood",110);
-        Hotel hotel2=new Hotel("BridgeWood",160);
-        Hotel hotel3=new Hotel("RidgeWood",220);
+        Hotel hotel1=new Hotel("LakeWood",110,90);
+        Hotel hotel2=new Hotel("BridgeWood",160,50);
+        Hotel hotel3=new Hotel("RidgeWood",220,150);
         hotelReservation.addHotel(hotel1);
         hotelReservation.addHotel(hotel2);
         hotelReservation.addHotel(hotel3);
-        int days=hotelReservation.noOfDays("05-20-2020","05-22-2020");
+        int days=hotelReservation.noOfDays("09-10-2020","09-11-2020");
         Hotel result=hotelReservation.checkCheapestRateHotel(days);
         System.out.println(result);
         Assertions.assertEquals(hotel1,result);

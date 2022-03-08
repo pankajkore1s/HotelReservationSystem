@@ -3,7 +3,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class HotelReservation {
@@ -23,9 +22,8 @@ public class HotelReservation {
             Date date1 = obj.parse(firstDate);
             Date date2 = obj.parse(lastDate);
 
-            int time_difference = (int) (date2.getTime() - date1.getTime());
+            int day_difference = (int) (date2.getTime() - date1.getTime());
 
-            int days_difference = (int) (TimeUnit.MILLISECONDS.toDays(time_difference) % 365);
         } catch (ParseException exception) {
             exception.printStackTrace();
         }
